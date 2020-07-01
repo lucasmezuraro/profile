@@ -1,0 +1,14 @@
+@import '../../index.scss';
+
+.main {
+    display: flex;
+    flex-flow: row wrap;
+
+    &-selected {
+        display: flex;
+        flex-flow: column;
+        width: 70%;
+        height: 100%;
+        background-color: $selected-background;
+    }
+}
