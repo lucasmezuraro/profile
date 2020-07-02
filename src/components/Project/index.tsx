@@ -7,7 +7,9 @@ function Project(props: Props) {
 
     return (
         <div className="main-selection-projects-content-panel-project">
-
+            <div className="main-selection-projects-content-panel-project-title">
+                Portfolio
+            </div>
         </div>
     )
 }

@@ -1,15 +1,18 @@
 import React from 'react'
+import {useSelector} from 'react-redux';
+import { Project } from '../../interfaces/Project';
 
 interface Props {}
 
 function Introduced(props: Props) {
-    const {} = props
+    
+    const project: Project = useSelector((state: any) => state.selectedProject);
 
     return (
         <div className="main-selected">
                 <div className="main-selected-content">
                     <div className="main-selected-content-title">
-                        Portfolio
+                        {project.title}
                     </div>
                     <div className="main-selected-content-information">
                         <div className="main-selected-content-information-apresentation">
@@ -21,19 +24,19 @@ function Introduced(props: Props) {
                             <div className="main-selected-content-information-description-column">
                                 <div className="main-selected-content-information-description-column-side">
                                     <div className="main-selected-content-information-description-column-side-text">
-                                        Name: Portfolio  
+                                        start at: {`${project.startAt.getDay()}/${project.startAt.getMonth()}/${project.startAt.getFullYear()}`}  
                                     </div>         
                                 </div>
                                 <div className="main-selected-content-information-description-column-side">
                                     <div className="main-selected-content-information-description-column-side-text">
-                                        Name: Portfolio  
+                                    end at: {`${project.endAt.getDay()}/${project.endAt.getMonth()}/${project.endAt.getFullYear()}`} 
                                     </div>           
                                 </div>
                             </div>
                             <div className="main-selected-content-information-description-column">
                             <div className="main-selected-content-information-description-column-side">
                                     <div className="main-selected-content-information-description-column-side-text">
-                                        Name: Portfolio  
+                                        Responsive: {project.responsive?.toString()}  
                                     </div>           
                                 </div>
                                 <div className="main-selected-content-information-description-column-side">
@@ -45,11 +48,7 @@ function Introduced(props: Props) {
                         </div>
                     </div>
                     <div className="main-selected-content-describe">
-                    DESCRIPTION: Cras ac sem sit amet eros ullamcorper placerat. Orci varius natoque penatibus et
-                        magnis dis parturient montes, nascetur ridiculus mus. Fusce laoreet nisl id nulla tincidunt 
-                        tincidunt. Maecenas ullamcorper accumsan urna, accumsan tincidunt ante tempus ac. 
-                        In feugiat semper metus vel finibus. Donec vitae sem sit amet lorem maximus porttitor. 
-                        Maecenas auctor purus in ex ornare suscipit. Fusce lectus nisi,
+                    DESCRIPTION: {project.description}
                     </div>
                     <div className="main-selected-content-screenshots">
                         <div className="main-selected-content-screenshots-box">
