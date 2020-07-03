@@ -6,5 +6,6 @@ export interface Project {
     responsive?: boolean,
     tools: string[],
     image: string,
-    description: string
+    description: string,
+    type: string
 }

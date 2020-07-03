@@ -15,6 +15,8 @@ describe('Main', () => {
            selectedProject:initialState
         });
     })
+
+    afterEach(cleanup);
     
     it ('must be defined', () => {
        

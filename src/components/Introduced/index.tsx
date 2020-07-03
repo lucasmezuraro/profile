@@ -1,6 +1,7 @@
 import React from 'react'
 import {useSelector} from 'react-redux';
 import { Project } from '../../interfaces/Project';
+import ToolItem from '../ToolItem';
 
 interface Props {}
 
@@ -24,7 +25,7 @@ function Introduced(props: Props) {
                             <div className="main-selected-content-information-description-column">
                                 <div className="main-selected-content-information-description-column-side">
                                     <div className="main-selected-content-information-description-column-side-text">
-                                        start at: {`${project.startAt.getDay()}/${project.startAt.getMonth()}/${project.startAt.getFullYear()}`}  
+                                        start at: {`${project.startAt.getUTCDay()}/${project.startAt.getMonth()}/${project.startAt.getFullYear()}`}  
                                     </div>         
                                 </div>
                                 <div className="main-selected-content-information-description-column-side">
@@ -42,6 +43,22 @@ function Introduced(props: Props) {
                                 <div className="main-selected-content-information-description-column-side">
                                     <div className="main-selected-content-information-description-column-text">
                                         Name: Portfolio  
+                                    </div>           
+                                </div>
+                            </div>
+                            <div className="main-selected-content-information-description-column">
+                            <div className="main-selected-content-information-description-column-side">
+                                    <div className="main-selected-content-information-description-column-side-text">
+                                        <div className="main-selected-content-information-description-button">
+                                            <a href="/" className="main-selected-content-information-description-button-tag">Github</a>
+                                        </div>
+                                    </div>           
+                                </div>
+                                <div className="main-selected-content-information-description-column-side">
+                                    <div className="main-selected-content-information-description-column-text">
+                                        <div className="main-selected-content-information-description-button">
+                                            <a href="/" className="main-selected-content-information-description-button-tag">Site</a>  
+                                        </div>
                                     </div>           
                                 </div>
                             </div>
@@ -63,12 +80,11 @@ function Introduced(props: Props) {
                     </div>
                     <div className="main-selected-content-tools">
                         <div className="main-selected-content-tools-box">
-                            <div className="main-selected-content-tools-box-item">
-                                React.js
-                            </div>
-                            <div className="main-selected-content-tools-box-item">
-                                Typescript
-                            </div>
+                            {
+                                project.tools ? project.tools.map((tool) => {
+                                    return <ToolItem name={tool} />
+                                }): ''
+                            }
                         </div>
                     </div>
                 </div>
