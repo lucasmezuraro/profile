@@ -3,7 +3,6 @@ import React from 'react'
 interface Props { }
 
 function Social(props: Props) {
-    const { } = props
 
     return (
         <div className="main-selection-personal-information-content-description-social">

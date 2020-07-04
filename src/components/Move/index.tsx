@@ -11,18 +11,11 @@ interface Props {
 function Move(props: Props) {
   const {direction} = props;
   const dispatch = useDispatch();
-  const position = useSelector((state: any) => state.showProjects.position);
-  const projects = useSelector((state: any) => state.showProjects.projects);
   const next = useSelector((state: any) => state.showProjects.next);
   const previous = useSelector((state: any) => state.showProjects.previous);
-  const current = useSelector((state: any) => state.showProjects.current);
 
   let condition = (next >= listProjects.length && props.direction === 'next') || (previous - 1 < -1 && props.direction === "previous");
 
-
-  function wheel(e: any) {
-    console.log(e);
-  }
 
   function directionOf() {
       if (direction === 'previous') {

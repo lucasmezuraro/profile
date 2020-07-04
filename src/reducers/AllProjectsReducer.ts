@@ -1,7 +1,5 @@
 import {types} from '../actionTypes/actionTypes';
 import {projects} from '../data/projects';
-import { Project } from '../interfaces/Project';
-import { createSecureContext } from 'tls';
 
 
 export const initialState = {
@@ -24,10 +22,6 @@ export const showProjectsReducer = (state = initialState, action: any) => {
             let currentPrv = (state.current >= 1) && optionPrv ? (state.current) - 1 : state.current;
             let nextPrv = state.next >= 2 && optionPrv ? (state.next) - 1 : state.next;
 
-            console.log('Previous: ',previousPrv);
-            console.log('Current: ',currentPrv);
-            console.log('Next: ',nextPrv);
-
             return {
                 previous: previousPrv,
                 current: currentPrv,
@@ -42,10 +36,7 @@ export const showProjectsReducer = (state = initialState, action: any) => {
             let previousNext = (state.current >= 0) && option ? (state.previous) + 1 : state.previous;
             let currentNext = (state.current >= 0) && option ? (state.current) + 1 : state.current;
             let nextNxt = state.next >= 1 && option ? (state.next) + 1 : state.next;    
-            
-            console.log('Previous: ',previousNext);
-            console.log('Current: ',currentNext);
-            console.log('Next: ',nextNxt);
+
                    
             return {
                 previous: previousNext,

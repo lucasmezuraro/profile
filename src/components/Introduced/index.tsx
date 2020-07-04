@@ -9,7 +9,7 @@ interface Props {}
 function Introduced(props: Props) {
     
     const project: Project = useSelector((state: any) => state.selectedProject);
-    const {t, i18n} = useTranslation('common');
+    const {t} = useTranslation('common');
 
     return (
         <Suspense fallback={`Is loading...`}>
