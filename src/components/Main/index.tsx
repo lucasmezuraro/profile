@@ -1,4 +1,8 @@
-import React from 'react'
+import React, { Suspense } from 'react'
+import './style.scss';
+import Introduced from '../Introduced';
+import Selection from '../Selection';
+
 
 interface Props {}
 
@@ -6,12 +10,12 @@ function Main(props: Props) {
     const {} = props
 
     return (
-        <div className="main" data-testid="main">
-            <div className="selected">
+        <Suspense fallback={'is loading...'}>
+            <div className="main" data-testid="main">
+                <Introduced />
+                <Selection />
             </div>
-            <div className="selection">
-            </div>
-        </div>
+        </Suspense>
     )
 }
 
