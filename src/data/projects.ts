@@ -2,14 +2,19 @@ import { Project } from "../interfaces/Project"
 
 const portfolioProject: Project = {
     title: 'Portfolio',
-    description: 'A project ....',
+    description: "This project it's a thought about why i'd to present my work for headhunters and the general public, cause...",
     startAt: new Date(),
     endAt: new Date(),
     progress: 40,
-    tools: ['typescript', 'react'],
+    tools: ['typescript', 'react','i18next', 'sass', 'redux', 'Travis CI'],
     responsive: true,
-    image: '',
-    type: 'Front end'
+    image: '/images/portfolio_principal_image.png',
+    type: 'Front end',
+    github: 'https://github.com/lucasmezuraro/profile',
+    site: 'https://lpmezuraro-portfolio.netlify.app/',
+    integration: true,
+    docker: false,
+    screenshots: ['/images/portfolio_scr1.png', '', '']
 }
 
 const personalSiteProject: Project = {
@@ -20,8 +25,13 @@ const personalSiteProject: Project = {
     progress: 100,
     tools: ['jest', 'react'],
     responsive: true,
-    image: '',
-    type: 'Front end'
+    image: '/images/personal_site_principal_image.png',
+    type: 'Front end',
+    github: '',
+    site: '',
+    integration: false,
+    docker: false,
+    screenshots: ['', '', '']
 }
 
 const pizzaFinderProject: Project = {
@@ -32,8 +42,13 @@ const pizzaFinderProject: Project = {
     progress: 100,
     tools: ['jest', 'react'],
     responsive: true,
-    image: '',
-    type: 'Back end'
+    image: '/images/pizz_finder_principal_image.png',
+    type: 'Back end',
+    github: '',
+    site: '',
+    integration: false,
+    docker: false,
+    screenshots: ['/images/pizz_finder_scr1.png', '/images/pizz_finder_scr2.png', '']
 }
 
 const apiUsingNestProject: Project = {
@@ -45,7 +60,12 @@ const apiUsingNestProject: Project = {
     tools: ['typescript', 'typeorm'],
     responsive: true,
     image: '',
-    type: 'Front end'
+    type: 'Front end',
+    github: '',
+    site: '',
+    integration: false,
+    docker: false,
+    screenshots: ['', '', '']
 }
 
 

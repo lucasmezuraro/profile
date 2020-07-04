@@ -9,13 +9,19 @@ function Social(props: Props) {
         <div className="main-selection-personal-information-content-description-social">
             <div className="main-selection-personal-information-content-description-social-box">
                 <div className="main-selection-personal-information-content-description-social-box-icon">
-                    <img className="main-selection-personal-information-content-description-social-box-icon-image" src="/images/github.png" alt=""></img>
+                    <a href='https://github.com/lucasmezuraro/'>
+                        <img className="main-selection-personal-information-content-description-social-box-icon-image" src="/images/github.png" alt=""></img>
+                    </a>
                 </div>
                 <div className="main-selection-personal-information-content-description-social-box-icon">
-                    <img className="main-selection-personal-information-content-description-social-box-icon-image" src="/images/linkedin.png" alt=""></img>
+                    <a href="https://www.linkedin.com/in/lucas-mezuraro-3a341a72/">
+                        <img className="main-selection-personal-information-content-description-social-box-icon-image" src="/images/linkedin.png" alt=""></img>
+                    </a>
                 </div>
                 <div className="main-selection-personal-information-content-description-social-box-icon">
-                    <img className="main-selection-personal-information-content-description-social-box-icon-image" src="/images/gmail.png" alt=""></img>
+                    <a href="mailto:lucaspmezuraro@gmail.com">
+                        <img className="main-selection-personal-information-content-description-social-box-icon-image" src="/images/gmail.png" alt=""></img>
+                    </a>
                 </div>
             </div>
         </div>

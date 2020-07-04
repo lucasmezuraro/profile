@@ -19,7 +19,10 @@ function Move(props: Props) {
 
   let condition = (next >= listProjects.length && props.direction === 'next') || (previous - 1 < -1 && props.direction === "previous");
 
-  console.log(condition);
+
+  function wheel(e: any) {
+    console.log(e);
+  }
 
   function directionOf() {
       if (direction === 'previous') {

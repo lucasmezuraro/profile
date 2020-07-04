@@ -1,20 +1,24 @@
-import React, { Profiler } from 'react'
+import React, {Suspense } from 'react'
 import Social from '../Social';
+import { useTranslation } from 'react-i18next';
+
 
 interface Props {}
 
 function Profile(props: Props) {
     const {} = props
+    const [t, i18n] = useTranslation('common');
 
     return (
+        <Suspense fallback={'is loading...'}>
         <div className="main-selection-personal-information">
             <div className="main-selection-personal-information-languages">
                 <div className="main-selection-personal-information-languages-box">
-                    <div className="main-selection-personal-information-languages-icon">
+                    <div className="main-selection-personal-information-languages-icon" onClick={() => i18n.changeLanguage('ptbr')}>
                         <img className="main-selection-personal-information-languages-icon-image" src="/images/ptbr.png" alt="portuguese"></img>
                     </div>
-                    <div className="main-selection-personal-information-languages-icon">
-                    <img className="main-selection-personal-information-languages-icon-image" src="/images/english.png" alt="english"></img>
+                    <div className="main-selection-personal-information-languages-icon" onClick={() => i18n.changeLanguage('en')}>
+                        <img className="main-selection-personal-information-languages-icon-image" src="/images/english.png" alt="english"></img>
                     </div>
                 </div>
             </div>
@@ -30,13 +34,14 @@ function Profile(props: Props) {
                             Lucas Mezuraro 
                         </div>
                         <div className="main-selection-personal-information-content-description-title-work">
-                            Jr. Developer 
+                            {t('me.work')} 
                         </div>
                     </div>
                     <Social />
                 </div>
             </div>
         </div>
+        </Suspense>
     )
 }
 

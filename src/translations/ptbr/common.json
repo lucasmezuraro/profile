@@ -1,0 +1,14 @@
+{
+    "project": {
+        "title": "título",
+        "startAt": "começou ",
+        "endAt": "finalizou ",
+        "description": "descrição ",
+        "responsive": "responsivo ",
+        "integration": "ci/cd pipeline",
+        "docker": "docker"
+    },
+    "me": {
+        "work": "Dev. júnior"
+    }
+}

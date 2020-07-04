@@ -22,7 +22,7 @@ function Project(props: Props) {
             <div className="main-selection-projects-content-panel-project-tools">
                 {
                     project.tools ? project.tools.map((tool: string) => {
-                    return <div className="main-selection-projects-content-panel-project-tools-tool">{tool}</div>
+                    return <div key={tool} className="main-selection-projects-content-panel-project-tools-tool">{tool}</div>
                     }) : ''
                 } 
 

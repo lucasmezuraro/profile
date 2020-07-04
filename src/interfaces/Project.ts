@@ -7,5 +7,10 @@ export interface Project {
     tools: string[],
     image: string,
     description: string,
-    type: string
+    type: string,
+    github: string,
+    site: string,
+    integration: boolean,
+    docker: boolean,
+    screenshots : [string, string, string]
 }
