@@ -99,7 +99,11 @@
                             width: 50%;
                             
                             &-text {
+                                display:flex;
+                                flex-flow: row wrap;
                                 margin: 1%;
+                                align-items: center;
+                                justify-content: center;
                             }
                         }
                     }
