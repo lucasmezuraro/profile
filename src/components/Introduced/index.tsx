@@ -13,7 +13,7 @@ function Introduced(props: Props) {
 
     return (
         <Suspense fallback={`Is loading...`}>
-        <div className="main-selected">
+        <div className="main-selected" data-testid="main-selected">
                 <div className="main-selected-content">
                     <div className="main-selected-content-title">
                         {project.title}
