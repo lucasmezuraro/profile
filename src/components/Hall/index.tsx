@@ -7,8 +7,6 @@ import {projects as listProjects} from '../../data/projects';
 interface Props {}
 
 function Hall(props: Props) {
-    const {} = props
-    const projects = useSelector((state: any) => state.showProjects.projects);
     const next = useSelector((state: any) => state.showProjects.next);
 
 

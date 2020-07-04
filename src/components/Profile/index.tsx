@@ -6,7 +6,6 @@ import { useTranslation } from 'react-i18next';
 interface Props {}
 
 function Profile(props: Props) {
-    const {} = props
     const [t, i18n] = useTranslation('common');
 
     return (

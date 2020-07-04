@@ -7,7 +7,6 @@ import Selection from '../Selection';
 interface Props {}
 
 function Main(props: Props) {
-    const {} = props
 
     return (
         <Suspense fallback={'is loading...'}>

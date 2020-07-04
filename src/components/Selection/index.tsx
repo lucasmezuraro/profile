@@ -5,8 +5,6 @@ import Hall from '../Hall'
 interface Props {}
 
 function Selection(props: Props) {
-    const {} = props
-
     return (
         <div className="main-selection">
             <Profile />
