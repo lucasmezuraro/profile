@@ -3,6 +3,7 @@ import {useSelector} from 'react-redux';
 import { Project } from '../../interfaces/Project';
 import ToolItem from '../ToolItem';
 import {useTranslation} from "react-i18next";
+import './style.scss';
 
 interface Props {}
 
@@ -55,14 +56,12 @@ function Introduced(props: Props) {
                             <div className="main-selected-content-information-description-column">
                                 <div className="main-selected-content-information-description-column-side">
                                     <div className="main-selected-content-information-description-column-side-text">
-                                    {t('project.integration')} : <span className="selected-text">{project.integration?.toString()}  
-                                    </span>
+                                    {t('project.integration')} : {project.integration ? <div className="work"></div>: <div className="work-not"></div>}  
                                     </div>           
                                 </div>
                                 <div className="main-selected-content-information-description-column-side">
                                     <div className="main-selected-content-information-description-column-side-text">
-                                    {t('project.docker')} : <span className="selected-text">{project.docker?.toString()}  
-                                    </span>
+                                    {t('project.docker')} : {project.docker ? <div className="work"></div>: <div className="work-not"></div>}   
                                     </div>           
                                 </div>
                             </div>
