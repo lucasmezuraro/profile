@@ -2,6 +2,7 @@ import React from 'react'
 import {Project as ProjectType} from '../../interfaces/Project';
 import { useDispatch, useSelector } from 'react-redux';
 import {changeProject} from '../../actions/changeProject';
+import "./project.scss";
 
 
 
@@ -15,19 +16,21 @@ function Project(props: Props) {
     const selectedProject = useSelector((state: any) => state.selectedProject); 
     return (
         
-        <div className="main-selection-projects-content-panel-project" onClick={() => dispatch(changeProject(project))} style={{backgroundColor: project.title === selectedProject.title ? '#FE8F8F': '' }}>
-            <div className="main-selection-projects-content-panel-project-title">
+        <div className="panel-project" onClick={() => dispatch(changeProject(project))} style={{backgroundColor: project.title === selectedProject.title ? '#FE8F8F': '' }}>
+            <div className="panel-project-title">
                 {project.title}
             </div>
-            <div className="main-selection-projects-content-panel-project-tools">
+            <div className="panel-project-tools">
                 {
                     project.tools ? project.tools.map((tool: string) => {
-                    return <div key={tool} className="main-selection-projects-content-panel-project-tools-tool">{tool}</div>
+                    return <div key={tool} className="panel-project-tools-tool">
+                            <img key={tool} className="tool-image" src={`/images/${tool}.png`} alt={tool}></img>
+                        </div>
                     }) : ''
                 } 
 
             </div>
-            <div className="main-selection-projects-content-panel-project-type">{project.type}</div>
+            <div className="type">{project.type}</div>
         </div>
     )
 }

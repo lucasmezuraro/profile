@@ -1,10 +1,11 @@
 import {types} from '../actionTypes/actionTypes';
 import {projects} from '../data/projects';
+import { Project } from '../interfaces/Project';
 
 
-export const initialState = projects[0];
+export const initialState: Project = projects[0];
 
-export const selectedProjectReducer = (state = initialState, action: {type: string, project: any}) => {
+export const selectedProjectReducer = (state = initialState, action: {type: string, project: Project}) => {
     switch(action.type) {
         case types.CHANGE_PROJECT:
             return {

@@ -4,12 +4,20 @@
     color: $text-selected-color;
 }
 
+@media only screen and (max-width: $mobile-size) {
+    .main {
+        display: flex;
+        flex-flow: column-reverse wrap;
+    }
+}
+
+@media only screen and (min-width: $mobile-size+1) {
 .main {
     display: flex;
     flex-flow: row wrap;
     
-
-    &-selected {
+}
+    /* &-selected {
         display: flex;
         flex-flow: column wrap;
         width: 60%;
@@ -417,7 +425,6 @@
                         width: 70%;
                         height: 42.5%;
                         background-color: $decoration-color-primary;
-                        /* border: solid #fc6d6d 1px;  */
                         box-shadow: 0 0 1vh rgba(0, 0, 0, 0.3); 
                         -webkit-box-shadow: 0 0 1vh rgba(0, 0, 0, 0.3); 
                         -moz-box-shadow: 0 0 1vh rgba(0, 0, 0, 0.3);
@@ -494,5 +501,5 @@
             
         }
 
-    }
+    } */
 }

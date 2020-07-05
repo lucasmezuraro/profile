@@ -1,6 +1,6 @@
 import React from 'react';
 import {render, cleanup} from '@testing-library/react';
-import Main from '../components/Main/index';
+import Main from '../components/Main/main';
 import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
 import {initialState} from '../reducers/selectedProjectReducer';

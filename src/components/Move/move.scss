@@ -1,0 +1,91 @@
+@import "../../index.scss";
+
+@media only screen and (max-width: $mobile-size) {
+   .previous { 
+        display: none;
+   }
+   .next {
+       display: none;
+   }
+}
+@media only screen and (min-width: $mobile-size+1) {
+    .previous {
+        background-color: #000;
+        &-box {
+            width: 16vh;
+            height: 6vh;
+            display: flex;
+            background-color: $decoration-color-primary;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 1vh rgba(0, 0, 0, 0.3); 
+            -webkit-box-shadow: 0 0 1vh rgba(0, 0, 0, 0.3); 
+            -moz-box-shadow: 0 0 1vh rgba(0, 0, 0, 0.3);
+
+            &-icon {
+                width: 3vh;
+                height: 3vh;
+                transform: rotate(180deg);
+            }
+        
+        }
+
+        &-boxFinal {
+            width: 16vh;
+            height: 6vh;
+            background-color: #cacaca;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 1vh rgba(0, 0, 0, 0.3); 
+            -webkit-box-shadow: 0 0 1vh rgba(0, 0, 0, 0.3); 
+            -moz-box-shadow: 0 0 1vh rgba(0, 0, 0, 0.3);
+
+            &-icon {
+                width: 3vh;
+                height: 3vh;
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    .next {
+        &-box {
+            width: 16vh;
+            height: 6vh;
+            display: flex;
+            background-color: $decoration-color-primary;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 1vh rgba(0, 0, 0, 0.3); 
+            -webkit-box-shadow: 0 0 1vh rgba(0, 0, 0, 0.3); 
+            -moz-box-shadow: 0 0 1vh rgba(0, 0, 0, 0.3);
+
+            &-icon {
+                width: 3vh;
+                height: 3vh;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        &-boxFinal {
+            width: 16vh;
+            height: 6vh;
+            background-color: #cacaca;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 1vh rgba(0, 0, 0, 0.3); 
+            -webkit-box-shadow: 0 0 1vh rgba(0, 0, 0, 0.3); 
+            -moz-box-shadow: 0 0 1vh rgba(0, 0, 0, 0.3);
+
+            &-icon {
+                width: 3vh;
+                height: 3vh;
+            }
+        }
+    }
+}

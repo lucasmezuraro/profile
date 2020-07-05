@@ -16,33 +16,37 @@ export const showProjectsReducer = (state = initialState, action: any) => {
     switch(action.type) {
         case types.PROJECT_PREVIOUS :
             
-            const optionPrv = state.previous - 1 >= -1;
+            const conditionToComeBack = state.previous - 1 >= -1;
+            const currentPositionBiggerThenOne = state.current >= 1;
+            const nextPositionMustBeBiggerThenTwo = state.next >= 2;
 
-            let previousPrv = (state.current >= 1) && optionPrv ? (state.previous) - 1 : state.previous;
-            let currentPrv = (state.current >= 1) && optionPrv ? (state.current) - 1 : state.current;
-            let nextPrv = state.next >= 2 && optionPrv ? (state.next) - 1 : state.next;
+            let previousPositionToComeBack = currentPositionBiggerThenOne && conditionToComeBack ? (state.previous) - 1 : state.previous;
+            let currentPositionToComeBack = currentPositionBiggerThenOne && conditionToComeBack ? (state.current) - 1 : state.current;
+            let nextPositionToComeBack = nextPositionMustBeBiggerThenTwo && conditionToComeBack ? (state.next) - 1 : state.next;
 
             return {
-                previous: previousPrv,
-                current: currentPrv,
-                next: nextPrv,
-                projects: [projects[currentPrv], projects[nextPrv]]                
+                previous: previousPositionToComeBack,
+                current: currentPositionToComeBack,
+                next: nextPositionToComeBack,
+                projects: [projects[currentPositionToComeBack], projects[nextPositionToComeBack]]                
             };   
         
         case types.PROJECT_NEXT :
 
-            const option = state.next + 1 < projects.length + 1;
+            const conditionToAdvance = state.next + 1 < projects.length + 1;
+            const currentPositionBiggerThenZero = state.current >= 0;
+            const nextPositionMustBeBiggerThenOne = state.next >= 1;
 
-            let previousNext = (state.current >= 0) && option ? (state.previous) + 1 : state.previous;
-            let currentNext = (state.current >= 0) && option ? (state.current) + 1 : state.current;
-            let nextNxt = state.next >= 1 && option ? (state.next) + 1 : state.next;    
+            let previousPositionToAdvance = currentPositionBiggerThenZero && conditionToAdvance ? (state.previous) + 1 : state.previous;
+            let currentPositionToAdvance = currentPositionBiggerThenZero && conditionToAdvance ? (state.current) + 1 : state.current;
+            let nextPositionToAdvance = nextPositionMustBeBiggerThenOne && conditionToAdvance ? (state.next) + 1 : state.next;    
 
                    
             return {
-                previous: previousNext,
-                current: currentNext,
-                next: nextNxt,
-                projects: [projects[currentNext], projects[nextNxt] ? projects[nextNxt] : [] ]                
+                previous: previousPositionToAdvance,
+                current: currentPositionToAdvance,
+                next: nextPositionToAdvance,
+                projects: [projects[currentPositionToAdvance], projects[nextPositionToAdvance] ? projects[nextPositionToAdvance] : [] ]                
             };     
             
         default:
