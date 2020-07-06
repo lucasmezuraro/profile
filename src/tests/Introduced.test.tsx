@@ -12,6 +12,7 @@ describe('Introduced Component', () => {
     beforeEach(() => {
         store = mockStore({
            selectedProject: initialState,
+           showProjects: initialState
         });
     })
 
