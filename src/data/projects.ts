@@ -27,8 +27,8 @@ const personalSiteProject: Project = {
     responsive: true,
     image: '/images/personal_site_principal_image.png',
     type: 'Front end',
-    github: '',
-    site: '',
+    github: 'https://github.com/lucasmezuraro/blog_personal',
+    site: 'https://lpmezuraro.netlify.app/',
     integration: false,
     docker: false,
     screenshots: ['', '', '']
