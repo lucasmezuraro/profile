@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-<svg src="https://travis-ci.com/lucasmezuraro/profile.svg?branch=master />
+<img src="https://travis-ci.com/lucasmezuraro/profile.svg?branch=master />
 
 ## Available Scripts
 
