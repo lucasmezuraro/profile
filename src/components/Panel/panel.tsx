@@ -20,8 +20,6 @@ function Panel(props: Props) {
                     }): ''
                 }
             </div>
-            <div className="panel-mobile">
-            </div>
         </Suspense>
     )
 }

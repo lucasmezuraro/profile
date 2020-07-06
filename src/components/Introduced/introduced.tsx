@@ -4,6 +4,8 @@ import { Project } from '../../interfaces/Project';
 import ToolItem from '../ToolItem';
 import {useTranslation} from "react-i18next";
 import './introduced.scss';
+import Move from '../Move/move';
+import Panel from '../Panel/panel';
 
 interface Props {}
 
@@ -93,9 +95,45 @@ function Introduced(props: Props) {
                     </div>
                 </div>
             </div>
-            <div className="selected-mobile">
-                <div className="">
-                    
+            <div className="mobile">
+                <div className="mobile-content">
+                    <div className="content-apresentation">
+                        <div className="content-apresentation-title">{project.title}</div>
+                        <div className="content-image-apresentation">
+                            <div className="content-image-apresentation-box">
+                                <img className="content-image-apresentation-box-img" src={project.image} alt=""></img>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="content-description">
+                        <div className="content-description-column">
+                            <div className="content-description-column-side">
+                                <div className="content-description-column-side-text">
+                                    {t('project.responsive')}: {project.responsive?.toString()}
+                                </div>
+                                <div className="content-description-column-side-text">
+                                    {t('project.title')}: {project.title}
+                                </div>
+                            </div>
+                        </div>
+                        <div className="content-description-column">
+                            <div className="content-description-column-side">
+                                <div className="content-description-column-side-text">
+                                    CI/CD PIPELINE: {project.integration?.toString()}
+                                </div>
+                                <div className="content-description-column-side-text">
+                                    DOCKER: {project.docker?.toString()}
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+                <div className="slide">
+                    <Move direction="previous" />
+                    <div className="slide-content">
+                        <Panel />
+                    </div>
+                    <Move direction="next" />
                 </div>
             </div>
         </Suspense>
