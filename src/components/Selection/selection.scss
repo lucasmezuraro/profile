@@ -1,0 +1,21 @@
+@import "../../index.scss";
+
+@media only screen and (max-width: $mobile-size) {
+    .selection {
+        display: flex;
+        flex-flow: column wrap;
+        width: 100vh;
+        height: 40vh;
+    }
+}
+
+
+@media only screen and (min-width: $mobile-size+1) {
+
+    .selection {
+        display: flex;
+        flex-flow: column wrap;
+        width: 40%;
+        height: 100vh;
+    }
+}

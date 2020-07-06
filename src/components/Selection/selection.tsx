@@ -1,12 +1,13 @@
 import React from 'react'
-import Profile from '../Profile'
-import Hall from '../Hall'
+import Profile from '../Profile/profile'
+import Hall from '../Hall/hall'
+import './selection.scss'
 
 interface Props {}
 
 function Selection(props: Props) {
     return (
-        <div className="main-selection">
+        <div className="selection">
             <Profile />
             <Hall />
         </div>

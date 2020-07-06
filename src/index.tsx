@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Main from './components/Main/index';
+import Main from './components/Main/main';
 import {Provider} from 'react-redux';
 import store from './store';
 import {I18nextProvider} from "react-i18next";

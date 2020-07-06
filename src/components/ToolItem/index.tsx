@@ -6,7 +6,7 @@ function ToolItem(props: Props) {
     const { name } = props
 
     return (
-        <div className="main-selected-content-tools-box-item">
+        <div className="tools-box-item">
             {name}
         </div>
     )

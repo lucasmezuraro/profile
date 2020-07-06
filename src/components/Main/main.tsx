@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react'
-import './style.scss';
-import Introduced from '../Introduced';
-import Selection from '../Selection';
+import './main.scss';
+import Introduced from '../Introduced/introduced';
+import Selection from '../Selection/selection';
 
 
 interface Props {}
