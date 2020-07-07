@@ -31,13 +31,13 @@ function Introduced(props: Props) {
                             <div className="description-column">
                                 <div className="description-column-side">
                                     <div className="description-column-side-text">
-                                    {t('project.responsive')} : <span className="selected-text">{project.responsive?.toString()}  
+                                    {t('project.responsive')} : <span className="selected-text" data-testid="project-responsive">{project.responsive?.toString()}  
                                     </span>
                                     </div>           
                                 </div>
                                 <div className="description-column-side">
                                     <div className="description-column-side-text">
-                                    {t('project.title')}: <span className="selected-text"> {project.title}  
+                                    {t('project.title')}: <span className="selected-text" data-testid="project-title"> {project.title}  
                                     </span>
                                     </div>           
                                 </div>
@@ -45,12 +45,12 @@ function Introduced(props: Props) {
                             <div className="description-column">
                                 <div className="description-column-side">
                                     <div className="description-column-side-text">
-                                        {t('project.integration')} : {project.integration ? <div className="work"></div>: <div className="work-not"></div>}  
+                                        {t('project.integration')} : {project.integration ? <div className="work" data-testid="project-integration"></div>: <div data-testid="project-integration" className="work-not"></div>}  
                                     </div>           
                                 </div>
                                 <div className="description-column-side">
                                     <div className="description-column-side-text">
-                                        {t('project.docker')} : {project.docker ? <div className="work"></div>: <div className="work-not"></div>}   
+                                        {t('project.docker')} : {project.docker ? <div className="work" data-testid="project-docker"></div>: <div className="work-not" data-testid="project-docker"></div>}   
                                     </div>           
                                 </div>
                             </div>
