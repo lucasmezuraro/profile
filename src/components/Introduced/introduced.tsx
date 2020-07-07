@@ -58,14 +58,14 @@ function Introduced(props: Props) {
                                 <div className="description-column-side">
                                     <div className="description-column-side-text">
                                         <div className="description-button">
-                                            <a href={project.github} className="description-button-tag">Github</a>
+                                            <a href={project.github} className="description-button-tag" id='github'>Github</a>
                                         </div>
                                     </div>           
                                 </div>
                                 <div className="description-column-side">
                                     <div className="description-column-side-text">
                                         <div className="description-button">
-                                            <a href={project.site} className="description-button-tag">  Site</a>  
+                                            <a href={project.site} className="description-button-tag" id='site'>  Site</a>  
                                         </div>
                                     </div>           
                                 </div>
