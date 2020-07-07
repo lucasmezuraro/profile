@@ -20,4 +20,14 @@ describe('Introduced Component', () => {
         const {getByTestId} = render(<Provider store={store}><Introduced /></Provider>)
         expect(getByTestId('main-selected')).toBeInTheDocument();
     });
+
+    it('must be equal the store state sent', () => {
+        const {getByTestId} = render(<Provider store={store}><Introduced /></Provider>)
+        const titleProject: string = getByTestId('project-title').textContent;
+        expect(titleProject).toEqual(" "+store.getState().selectedProject.title);
+        const integrationProject = getByTestId('project-integration');
+        expect(integrationProject).toHaveClass("work");
+        const dockerProject = getByTestId('project-docker');
+        expect(dockerProject).toHaveClass("work-not");
+    });
 });

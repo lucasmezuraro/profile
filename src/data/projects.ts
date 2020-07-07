@@ -2,7 +2,7 @@ import { Project } from "../interfaces/Project"
 
 const portfolioProject: Project = {
     title: 'Portfolio',
-    description: "This project it's a thought about why i'd to present my work for headhunters and the general public, cause...",
+    description: "This project it's a thought about why i'd to present my work for headhunters and the general public",
     startAt: new Date(),
     endAt: new Date(),
     progress: 40,
@@ -19,7 +19,7 @@ const portfolioProject: Project = {
 
 const personalSiteProject: Project = {
     title: 'personal site',
-    description: 'A project ....',
+    description: 'The project of my personal site built in React too.',
     startAt: new Date(),
     endAt: new Date(),
     progress: 100,
@@ -36,7 +36,7 @@ const personalSiteProject: Project = {
 
 const pizzaFinderProject: Project = {
     title: 'Pizza finder',
-    description: 'A project of delivery food ....',
+    description: 'A project of delivery food that i am developing to test the NestJS and to keep me learning about new frameworks and concepts on NodeJS',
     startAt: new Date(),
     endAt: new Date(),
     progress: 100,
@@ -53,7 +53,7 @@ const pizzaFinderProject: Project = {
 
 const apiUsingNestProject: Project = {
     title: 'A API Using Nest.js',
-    description: 'A project of delivery food ....',
+    description: 'I am working on this project with goal of learning about his architecture',
     startAt: new Date(),
     endAt: new Date(),
     progress: 100,
