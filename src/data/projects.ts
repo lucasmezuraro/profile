@@ -36,7 +36,7 @@ const personalSiteProject: Project = {
 
 const pizzaFinderProject: Project = {
     title: 'Pizza finder',
-    description: 'A project of delivery food that i am developing to test the NestJS and to keep me learning about new frameworks and concepts on NodeJS',
+    description: 'A project of delivery food that i am developing to test the NestJS and to keep me learning',
     startAt: new Date(),
     endAt: new Date(),
     progress: 100,
@@ -48,7 +48,7 @@ const pizzaFinderProject: Project = {
     site: '',
     integration: false,
     docker: false,
-    screenshots: ['/images/pizz_finder_scr1.png', '/images/pizz_finder_scr2.png', '']
+    screenshots: ['/images/pizz_finder_scr1.png', '', '']
 }
 
 const apiUsingNestProject: Project = {

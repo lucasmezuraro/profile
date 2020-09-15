@@ -79,7 +79,7 @@ function Introduced(props: Props) {
                         
                         {project.screenshots ? project.screenshots.map((screen, index) => {
                             return <div key={index} className="screenshots-box">
-                                <img className="screenshots-box-image" src={screen} alt=""></img>
+                                <img className="screenshots-box-image" src={(screen ? screen : '/images/NotFound.png')} alt=""></img>
                             </div>
                         }): ''}
                         
